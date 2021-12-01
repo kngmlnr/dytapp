@@ -1,0 +1,520 @@
+/* ---------- root variables ---------- */
+:root {
+  --blue: rgb(10, 48, 65);
+  --red: rgb(183, 13, 0);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- general styling ---------- */
+html {
+  color: var(--text-color-dark);
+  font-family: var(--font-family);
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+/* ---------- topbar styling ---------- */
+.topbar {
+  background-color: var(--blue);
+  color: var(--text-color-light);
+  padding: 13.5px;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.topbar-logo {
+  width: 20%;
+  display: block;
+}
+
+
+#firebaseui-auth-container .firebaseui-id-submit {
+  background-color: var(--red);
+}
+
+#firebaseui-auth-container .firebaseui-id-secondary-link {
+  border: 1px solid var(--blue);
+  color: var(--blue)
+}
+
+#firebaseui-auth-container .firebaseui-link {
+  text-decoration: none;
+  border: none;
+  color: #333;
+  opacity: 50%;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  position: absolute;
+  top: 20px;
+}
+
+.topbar a.left {
+  left: 20px;
+}
+
+.topbar a.right {
+  right: 20px;
+}
+
+.logo-chat-div {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  /* background-color: var(--green); */
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #fff;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  box-shadow: #000000 22%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-block;
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ANNOUNCEMENT PAGE */
+.announcements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+
+.announcements-container h3 {
+  color: var(--red);
+  font-weight: 500;
+}
+
+.announcements-container h1 {
+  text-align: left;
+  color: var(--blue);
+  margin: 0 0 2rem 0;
+}
+
+.announcements-container button {
+  width: 120px;
+  height: 36px;
+  color: var(--red);
+  border-radius: 1rem;
+  border: 1px solid var(--red);
+  background-color: #fff;
+}
+
+.announcements-container .announcements {
+  margin-top: 2rem;
+}
+
+.announcements-container .card {
+  padding: 1rem;
+  border-radius: 30px;
+  background-color: rgba(10, 48, 65, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.announcements-container .card .card-name {
+  display: flex;
+  align-items: center;
+}
+
+.announcements-container .card .card-name img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.announcements-container .announcements .announcement-author {
+  color: var(--blue);
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.announcements-container .announcements .announcement-text {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.09);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.announcements-container .announcements .card-button {
+  width: 120px;
+  height: 36px;
+  color: #fff;
+  border-radius: 1rem;
+  background-color: var(--red);
+}
+
+/* ANNOUNCEMENT FORM STYLING */
+.create-announcement {
+  margin: 1rem auto 0 auto;
+  width: 95%;
+  background-color: rgba(10, 48, 65, 0.2);
+  padding: 0.5rem;
+}
+
+.create-announcement {
+  display: none;
+}
+
+.form-active {
+  display: block;
+}
+
+.create-announcement #announcement-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-announcement #announcement-form input {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  border: none;
+}
+
+.create-announcement #announcement-form textarea {
+  border: none;
+  font-family: var(--font-family);
+}
+
+.create-announcement #announcement-form .post-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.create-announcement #announcement-form .post-buttons .create-post-button {
+  background-color: var(--red);
+  color: #fff;
+}
+
+
+/* Add a color to the active/current link */
+.tabbar a {
+  fill: lightgray;
+}
+
+.tabbar a.active {
+  fill: var(--red);
+}
+/* ---------- page styling ---------- */
+.page {
+  display: none;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 110px);
+  background: #fff;
+  animation: fadeIn 0.4s;
+  /* padding equals height of tabbar and topbar */
+  padding: 55px 0;
+}
+
+/* ---------- logo styling ---------- */
+.logo {
+  margin: 2em auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ---------- animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- loader styling ---------- */
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  overflow: hidden;
+  background: var(--loader-background-color);
+  text-align: center;
+}
+
+.spinner {
+  border: 5px solid var(--light-grey);
+  border-radius: 50%;
+  border-top: 5px solid var(--light-green);
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  /* Safari */
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+/* ---------- authentication styling ---------- */
+#firebaseui-auth-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.firebaseui-container {
+  font-family: var(--font-family);
+  font: 16px var(--font-family);
+}
+
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover {
+  background: var(--green);
+  color: #fff;
+  border-radius: 0;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: var(--green);
+}
+
+.profile-img {
+  width: 100%;
+}
+
+
+/* ---------- Splash screen David ---------- */
+
+#splash-screen{
+  background-color: rgb(10, 48, 65);
+}
+
+.splash-screen-logo{
+  margin-top: 20%;
+  margin-bottom: 30%;
+}
+
+.placeholder-splash-screen{
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid white;
+  background-color: var(--blue);
+  color: white;
+}
+
+.placeholder-splash-screen-div{
+  margin-bottom: 40%;
+}
+
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+
+#splash-screen .get-started {
+  display: block;
+  color: white;
+  background-color: var(--red);
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 150px;
+  margin: 0 auto;
+
+}
+
+/* ---------- Onboarding-1 David ---------- */
+
+.arrow-circle-skip {
+  display: flex;
+  justify-content: space-between;
+  margin: 15% auto 0 auto;
+  width: 80%;
+}
+
+.circles {
+  position: absolute;
+  bottom: 6%;
+  width: 100%;
+}
+
+.back-arrow {
+  width: 10px;
+}
+
+.skip-link {
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 0.9rem;
+}
+
+#onboarding-1 .welcome{
+  font-size: 1rem;
+  color: var(--blue);
+  width: 80%;
+  margin: 2% auto;
+}
+
+#onboarding-1 .dyt{
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 80%;
+  margin: 3% auto 15% auto;
+  color: var(--red);
+}
+
+.next-button{
+  position: absolute;
+  bottom: 8%;
+  left: 28%;
+  display: block;
+  width: 150px;
+  color: white;
+  background-color: var(--red);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 auto 15% auto;
+  }
+
+.circle {
+  margin: 3%;
+}
+
+#onboarding-2 .arrow-circle-skip {
+  margin-bottom: 10%;
+}
+
+#onboarding-2 svg {
+  width: 90%;
+}
+
+#onboarding-2 h4 {
+  font-size: 0.9rem;
+  width: 70%;
+  margin: 10% auto;
+  color: var(--blue);
+}
+
+#onboarding-3 .arrow-circle-skip {
+  margin-bottom: 10%;
+}
+
+#onboarding-3 svg {
+  width: 90%;
+}
+
+#onboarding-3 h4 {
+  font-size: 0.9rem;
+  width: 70%;
+  margin: 10% auto;
+  color: var(--blue);
+}
+
+#onboarding-4 .arrow-circle-skip {
+  margin-bottom: 10%;
+}
+
+#onboarding-4 svg {
+  width: 90%;
+}
+
+#onboarding-4 h4 {
+  font-size: 0.9rem;
+  width: 70%;
+  margin: 10% auto;
+  color: var(--blue);
+}
